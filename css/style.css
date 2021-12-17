@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-alpha: rgb(42, 178, 175, 0.8);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+/* utility*/
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+p,
+li {
+    font-size: 1rem;
+    font-weight: 400;
+}
+li {
+    list-style: none;
+}
+/* utility end */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 4em 1.3em;
+}
+main {
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 345px;
+    box-shadow: 1px 3px 15px 5px rgba(0, 0, 0, 0.05);
+}
+section {
+    padding: 1.4em;
+}
+.community {
+    background-color: white;
+    padding: 2em 1.4em;
+}
+.community h1 {
+    color: var(--cyan);
+}
+.community h3 {
+    color: var(--bright-yellow);
+    margin: 1.5rem 0;
+    text-shadow: 0px 0px 10px 1px var(--bright-yellow);
+}
+.community p {
+    color: var(--grayish-blue);
+    line-height: 1.5rem;
+}
+.subsciption {
+    background-color: var(--cyan);
+}
+.subsciption h1 {
+    color: white;
+    margin-bottom: 0.7em;
+}
+.subsciption div span {
+    color: white;
+    vertical-align: middle;
+}
+.subsciption div span:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.subsciption div span:last-child {
+    margin-left: 0.8em;
+    color: var(--light-gray);
+    opacity: 0.5;
+    font-weight: 400;
+}
+.subsciption p {
+    margin-bottom: 1.6em;
+    color: var(--light-gray);
+    margin-top: 0.4em;
+}
+.subsciption button {
+    display: block;
+    background-color: var(--bright-yellow);
+    outline: none;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 1.1em;
+    font-weight: 700;
+    border-radius: 0.35rem;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.about {
+    background-color: var(--cyan-alpha);
+}
+.about h1 {
+    color: white;
+    margin-bottom: 0.8em;
+}
+.about li {
+    color: var(--light-gray);
+    opacity: 0.8;
+    line-height: 1.3rem;
+}
+
+@media (min-width: 750px) {
+    main {
+        max-width: 690px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .community {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .subsciption {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .about {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .community,
+    .subsciption,
+    .about {
+        padding: 2em;
+    }
+    .community p {
+        margin-right: 3em;
+        margin-top: -0.5em;
+    }
+}
