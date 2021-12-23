@@ -19,7 +19,7 @@ h1 {
     font-size: 1.5rem;
     font-weight: 700;
 }
-h3 {
+h2 {
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -57,7 +57,7 @@ section {
 .community h1 {
     color: var(--cyan);
 }
-.community h3 {
+.community h2 {
     color: var(--bright-yellow);
     margin: 1.5rem 0;
     text-shadow: 0px 0px 10px 1px var(--bright-yellow);
